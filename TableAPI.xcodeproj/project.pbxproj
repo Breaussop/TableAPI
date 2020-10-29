@@ -15,6 +15,10 @@
 		3A15D422254AF91D00D4A2ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A15D420254AF91D00D4A2ED /* LaunchScreen.storyboard */; };
 		3A15D42D254AF91D00D4A2ED /* TableAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A15D42C254AF91D00D4A2ED /* TableAPITests.swift */; };
 		3A15D438254AF91D00D4A2ED /* TableAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A15D437254AF91D00D4A2ED /* TableAPIUITests.swift */; };
+		3A15D44A254AF9E300D4A2ED /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A15D448254AF9E300D4A2ED /* TableViewCell.swift */; };
+		3A15D44B254AF9E300D4A2ED /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A15D449254AF9E300D4A2ED /* TableViewCell.xib */; };
+		3A15D450254B02BD00D4A2ED /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A15D44F254B02BD00D4A2ED /* NetworkManager.swift */; };
+		3A15D456254B02E600D4A2ED /* Modeller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A15D455254B02E600D4A2ED /* Modeller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		3A15D433254AF91D00D4A2ED /* TableAPIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableAPIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A15D437254AF91D00D4A2ED /* TableAPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableAPIUITests.swift; sourceTree = "<group>"; };
 		3A15D439254AF91D00D4A2ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A15D448254AF9E300D4A2ED /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		3A15D449254AF9E300D4A2ED /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		3A15D44F254B02BD00D4A2ED /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		3A15D455254B02E600D4A2ED /* Modeller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modeller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +107,10 @@
 		3A15D414254AF91C00D4A2ED /* TableAPI */ = {
 			isa = PBXGroup;
 			children = (
-				3A15D415254AF91C00D4A2ED /* AppDelegate.swift */,
-				3A15D417254AF91C00D4A2ED /* SceneDelegate.swift */,
-				3A15D419254AF91C00D4A2ED /* ViewController.swift */,
-				3A15D41B254AF91C00D4A2ED /* Main.storyboard */,
-				3A15D41E254AF91D00D4A2ED /* Assets.xcassets */,
-				3A15D420254AF91D00D4A2ED /* LaunchScreen.storyboard */,
-				3A15D423254AF91D00D4A2ED /* Info.plist */,
+				3A15D454254B02D000D4A2ED /* Model */,
+				3A15D45F254B07EF00D4A2ED /* Utilities */,
+				3A15D45E254B07E000D4A2ED /* Controller */,
+				3A15D45D254B07D700D4A2ED /* View */,
 			);
 			path = TableAPI;
 			sourceTree = "<group>";
@@ -126,6 +131,53 @@
 				3A15D439254AF91D00D4A2ED /* Info.plist */,
 			);
 			path = TableAPIUITests;
+			sourceTree = "<group>";
+		};
+		3A15D454254B02D000D4A2ED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A15D455254B02E600D4A2ED /* Modeller.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3A15D45D254B07D700D4A2ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A15D460254B083100D4A2ED /* TableCells */,
+				3A15D420254AF91D00D4A2ED /* LaunchScreen.storyboard */,
+				3A15D41E254AF91D00D4A2ED /* Assets.xcassets */,
+				3A15D41B254AF91C00D4A2ED /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3A15D45E254B07E000D4A2ED /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3A15D419254AF91C00D4A2ED /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3A15D45F254B07EF00D4A2ED /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3A15D44F254B02BD00D4A2ED /* NetworkManager.swift */,
+				3A15D423254AF91D00D4A2ED /* Info.plist */,
+				3A15D417254AF91C00D4A2ED /* SceneDelegate.swift */,
+				3A15D415254AF91C00D4A2ED /* AppDelegate.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		3A15D460254B083100D4A2ED /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				3A15D448254AF9E300D4A2ED /* TableViewCell.swift */,
+				3A15D449254AF9E300D4A2ED /* TableViewCell.xib */,
+			);
+			path = TableCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A15D422254AF91D00D4A2ED /* LaunchScreen.storyboard in Resources */,
+				3A15D44B254AF9E300D4A2ED /* TableViewCell.xib in Resources */,
 				3A15D41F254AF91D00D4A2ED /* Assets.xcassets in Resources */,
 				3A15D41D254AF91C00D4A2ED /* Main.storyboard in Resources */,
 			);
@@ -259,8 +312,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A15D41A254AF91C00D4A2ED /* ViewController.swift in Sources */,
+				3A15D44A254AF9E300D4A2ED /* TableViewCell.swift in Sources */,
+				3A15D450254B02BD00D4A2ED /* NetworkManager.swift in Sources */,
 				3A15D416254AF91C00D4A2ED /* AppDelegate.swift in Sources */,
 				3A15D418254AF91C00D4A2ED /* SceneDelegate.swift in Sources */,
+				3A15D456254B02E600D4A2ED /* Modeller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +493,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TableAPI/Info.plist;
+				INFOPLIST_FILE = TableAPI/Utilities/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,7 +511,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TableAPI/Info.plist;
+				INFOPLIST_FILE = TableAPI/Utilities/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
