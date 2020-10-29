@@ -14,10 +14,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var myTable : UITableView!
         
-   
-    var myModel : Modeller = Modeller()
-    
-    
+    var manager : Manager = Manager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,9 +41,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = myTable.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as? TableViewCell else {return UITableViewCell()}
-        let daPkge: ImgBundle = myModel.getPackage(table: tableView,path: indexPath)
-        cell.cellLabel.text = daPkge.id
-        cell.cellImage.image = daPkge.img
+        let myBundle: ImgBundle = manager.getIt(table: tableView,path: indexPath)
+        cell.cellLabel.text = myBundle.id
+        cell.cellImage.image = myBundle.img
         return cell
     }
 }
